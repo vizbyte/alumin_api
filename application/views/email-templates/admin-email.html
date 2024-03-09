@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+    th{
+        background-color: #8c9ca6;  color:#090000;  text-align: left; border: 1px black solid; padding: 5px;
+    }
+    td{
+        border: 1px black solid; padding: 5px;
+    }
+    tr{
+        border: 1px solid;
+    }
+    </style>
+</head>
+<body>
+	<div style="margin:10px 30px;">
+	
+		<p><strong>Dear Admin,</strong>&nbsp;<br><br>
+			A Customer has expressed interest on the website.<br>
+			The details of the candidate was submitted mentioned below  :
+		</p>
+		<p><strong>Customer Details</strong></p>
+        <table style="border: 1px solid;">
+           
+            <tr>
+                <th>Full Name</th>
+                <td> <?php echo $full_name;?>	</td>
+            </tr>
+            <tr>
+                <th>Mobile</th>
+                <td><?php echo $mobile;?></td>
+            </tr>
+            <tr>
+                <th>Email</th>
+                <td><?php echo $email;?></td>
+            </tr>
+            <tr>
+                <th>City</th>
+                <td><?php echo $city;?></td>
+            </tr>
+            <tr>
+                <th>Subject</th>
+                <td><?php echo $subject;?></td>
+            </tr>
+            <tr>
+                <th>Message</th>
+                <td><?php echo $message;?></td>
+            </tr>
+        </table>
+        <br>
+        <hr>
+        <br>
+        <p style="margin-top:-5px;">
+            <strong>CONTACT US (We Love to Chat!)</strong><br>
+            Email- hr@vizbytetechnology.com ,<br> Mobile: <a href="tel:9011477228">9011477228 </a> / 
+        </p>
+        <p>
+            H.62, Paithan-MIDC Tal-Paithan, Dist.-Aurangabad 431148.
+            <br><a href="www.vizbytetechnology.com" target="_blank">www.vizbytetechnology.com</a>
+        </p>
+</html>
