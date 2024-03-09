@@ -54,6 +54,8 @@ $route['default_controller'] = 'home';
 $route['sendEmail'] = 'email/adminEmail';
 $route['test'] = 'email/testFunction';
 $route['get-student-profile']='database_Ctrl/getStudentData';
+$route['login']='database_Ctrl/getAuthorization';
+$route['post-data'] ='database_Ctrl/insertUserData';
 
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
