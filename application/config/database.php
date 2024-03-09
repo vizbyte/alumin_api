@@ -81,7 +81,7 @@ switch($env){
 		'hostname' => 'localhost:3307',
 		'username' => 'root',
 		'password' => '',
-		'database' => 'vizbyte_technology',
+		'database' => 'ambad_alumni',
 		'dbdriver' => 'mysqli',
 		'dbprefix' => '',
 		'pconnect' => FALSE,

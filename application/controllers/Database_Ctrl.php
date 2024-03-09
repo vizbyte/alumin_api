@@ -36,7 +36,7 @@ class Database_Ctrl extends CI_Controller {
     public function getStudentData($id=1)
     {
         $this->data['studentData'] 		=	$this->Database_model->fetchStudentData($id);
-        echo json_encode(array('data'=>$this->data['studentData']));
+        echo  json_encode($this->data['studentData']);
     }
    
 }

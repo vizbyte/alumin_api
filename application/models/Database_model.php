@@ -12,7 +12,7 @@ class Database_model extends CI_Model {
 	}
 	public function fetchStudentData($id)
 	{
-		$sql="SELECT * FROM contact_us";
+		$sql="SELECT * FROM student_data";
 		$query = $this->db->query($sql);
 		return $query->result();
 	}
