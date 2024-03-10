@@ -94,5 +94,42 @@ class Database_Ctrl extends CI_Controller {
             ));
         }
     }
+
+    public function insertRegistrationData(){
+        $registrationData = array( 
+            
+            'f_name' => $this->input->post('fName'), 
+            'm_name' => $this->input->post('mName'), 
+            'l_name' => $this->input->post('lName'), 
+            'email' => $this->input->post('email'), 
+            'contact' => $this->input->post('contact'), 
+            'pass_year' => $this->input->post('passy'), 
+            'enrollment_no' => $this->input->post('enrollment'), 
+            'ambad_branch' => $this->input->post('abranch'), 
+            'clg_name' => $this->input->post('clgname'), 
+            'current_branch' => $this->input->post('cbranch'), 
+            'city' => $this->input->post('city'), 
+            
+        ); 
+        $login_info = array(
+            'username' => $this->input->post('username'), 
+            'password' => $this->input->post('password'), 
+        );
+        $insert_registration_info = $this->Database_model->insertRegistration($registrationData); 
+        $insert_login_info = $this->Database_model->insert($login_info);
+        // echo $insert_login_info."--------".$insert_registration_info;  
+        if ($insert_registration_info && $insert_login_info ) {
+            echo json_encode(array( 
+                'status' => true, 
+                'message' => 'Data updated',
+                'data'=>$insert_registration_info
+            ));
+        } else {
+            echo json_encode(array( 
+                'status' => false, 
+                'message' => 'Data not inserted'
+            ));
+        }
+    }
    
 }

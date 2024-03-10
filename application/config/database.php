@@ -78,7 +78,7 @@ $env = 'LOCAL';
 switch($env){
 	case 'LOCAL': $db['default'] = array(
 		'dsn'	=> '',
-		'hostname' => 'localhost:3307',
+		'hostname' => 'localhost',
 		'username' => 'root',
 		'password' => '',
 		'database' => 'ambad_alumni',

@@ -56,6 +56,8 @@ $route['test'] = 'email/testFunction';
 $route['get-student-profile']='database_Ctrl/getStudentData';
 $route['login']='database_Ctrl/getAuthorization';
 $route['post-data'] ='database_Ctrl/insertUserData';
+$route['registration'] ='database_Ctrl/insertRegistrationData';
+
 
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;

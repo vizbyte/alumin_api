@@ -23,7 +23,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 | a PHP script and you can easily do that on your own.
 |
 */
-$config['base_url'] = 'http://localhost:8080/alumni_api/';
+$config['base_url'] = 'http://localhost/alumini_api/';
 // $config['base_url'] = 'http://www.vizbytetechnology.com/';
 
 /*

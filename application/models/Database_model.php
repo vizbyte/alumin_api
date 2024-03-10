@@ -8,6 +8,7 @@ class Database_model extends CI_Model {
  
 		  // Database table name 
 		  $this->tbl_name = 'user_login'; 
+		  $this->tbl_registration = 'student_registration';
 	}
 	
 	public function insertContactUsData($data)
@@ -35,4 +36,12 @@ class Database_model extends CI_Model {
             return false; 
         } 
     } 
+	public function insertRegistration($data = array()){
+		$insert = $this->db->insert($this->tbl_registration, $data); 
+        if($insert){ 
+            return $this->db->insert_id(); 
+        }else{ 
+            return false; 
+        }
+	}
 }
