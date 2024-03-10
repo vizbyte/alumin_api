@@ -53,7 +53,7 @@ class Database_Ctrl extends CI_Controller {
     }
     public function getStudentData()
     {
-        $this->data['studentData'] 		=	$this->Database_model->fetchStudentData($this->input->get('student_id'));
+        $this->data['studentData'] 		=	$this->Database_model->fetchStudentData($this->input->get('username'));
         echo  json_encode($this->data['studentData']);
     }
     public function getAuthorization()
@@ -71,7 +71,8 @@ class Database_Ctrl extends CI_Controller {
         } else {
             echo json_encode(array( 
                 'status' => true, 
-                'message' => 'Login Successfully'
+                'message' => 'Login Successfully',
+                'userdata'=>$this->data['getLoginData']
             ));
         }
     }
@@ -99,6 +100,7 @@ class Database_Ctrl extends CI_Controller {
         $registrationData = array( 
             
             'f_name' => $this->input->post('fName'), 
+            'username' => $this->input->post('username'), 
             'm_name' => $this->input->post('mName'), 
             'l_name' => $this->input->post('lName'), 
             'email' => $this->input->post('email'), 

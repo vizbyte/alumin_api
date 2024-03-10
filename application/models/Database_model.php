@@ -16,9 +16,9 @@ class Database_model extends CI_Model {
 		$result= $this->db->insert('contact_us',$data);
 		return $result;
 	}
-	public function fetchStudentData($id)
+	public function fetchStudentData($username)
 	{
-		$sql="SELECT * FROM student_data where id=$id";
+		$sql="SELECT * FROM student_registration where username='$username'";
 		$query = $this->db->query($sql);
 		return $query->result();
 	}
