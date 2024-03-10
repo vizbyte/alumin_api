@@ -2,8 +2,8 @@
 -- version 5.0.2
 -- https://www.phpmyadmin.net/
 --
--- Host: 127.0.0.1:3307
--- Generation Time: Mar 09, 2024 at 01:20 PM
+-- Host: 127.0.0.1
+-- Generation Time: Mar 10, 2024 at 06:03 PM
 -- Server version: 10.4.11-MariaDB
 -- PHP Version: 7.2.29
 
@@ -50,6 +50,39 @@ INSERT INTO `student_data` (`id`, `full_name`, `email`, `mobile`, `city`, `subje
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `student_registration`
+--
+
+CREATE TABLE `student_registration` (
+  `id` int(11) NOT NULL,
+  `f_name` varchar(35) NOT NULL,
+  `m_name` varchar(35) NOT NULL,
+  `l_name` varchar(35) NOT NULL,
+  `email` varchar(35) NOT NULL,
+  `contact` int(10) NOT NULL,
+  `ambad_branch` varchar(40) NOT NULL,
+  `pass_year` int(5) NOT NULL,
+  `clg_name` varchar(80) NOT NULL,
+  `current_branch` varchar(40) NOT NULL,
+  `city` varchar(80) NOT NULL,
+  `enrollment_no` int(10) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `student_registration`
+--
+
+INSERT INTO `student_registration` (`id`, `f_name`, `m_name`, `l_name`, `email`, `contact`, `ambad_branch`, `pass_year`, `clg_name`, `current_branch`, `city`, `enrollment_no`) VALUES
+(8, 'Mahesh', 'Shivaji', 'Thombare', 'maheshs.thombare@gmail.com', 2147483647, '', 2024, 'MIT', 'IT', 'chatrpatisambhajinag', 2111620263),
+(9, 'Mahesh', 'Shivaji', 'Thombare', 'maheshs.thombare@gmail.com', 2147483647, '', 2024, 'MIT', 'IT', 'chatrpatisambhajinag', 2111620263),
+(10, 'Mahesh', 'Shivaji', 'Thombare', 'maheshs.thombare@gmail.com', 2147483647, '', 2024, 'MIT', 'IT', 'chatrpatisambhajinag', 2111620263),
+(11, 'Mahesh', 'Shivaji', 'Thombare', 'maheshs.thombare@gmail.com', 2147483647, '', 2024, 'MIT', 'IT', 'chatrpatisambhajinag', 2111620263),
+(12, 'Mahesh', 'Shivaji', 'Thombare', 'maheshs.thombare@gmail.com', 2147483647, '', 2024, 'MIT', 'IT', 'chatrpatisambhajinag', 2111620263),
+(13, 'Mahesh', 'Shivaji', 'Thombare', 'maheshs.thombare@gmail.com', 2147483647, '', 2024, 'MIT', 'IT', 'chatrpatisambhajinag', 2111620263);
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `user_login`
 --
 
@@ -67,10 +100,12 @@ CREATE TABLE `user_login` (
 --
 
 INSERT INTO `user_login` (`id`, `user_type`, `username`, `password`, `is_active`, `created_at`) VALUES
-(1, 'Admin', 'admin', '123', 'Y', '2024-03-09 17:18:49'),
-(2, 'Student', 'Mahesh', '123', 'Y', '2024-03-09 17:18:49'),
-(3, 'Student', 'vitthalb@cybage.com', 'test', 'Y', '2024-03-09 17:41:16'),
-(4, 'Student', 'test', 'test', 'Y', '2024-03-09 17:48:31');
+(8, 'Student', 'Mahesh', '123', 'Y', '2024-03-10 14:06:53'),
+(9, 'Student', 'Mahesh', '123', 'Y', '2024-03-10 14:09:55'),
+(10, 'Student', 'Mahesh', '123', 'Y', '2024-03-10 14:12:11'),
+(11, 'Student', 'Mahesh', '123', 'Y', '2024-03-10 14:13:52'),
+(12, 'Student', 'Mahesh', '123', 'Y', '2024-03-10 14:14:10'),
+(13, 'Student', 'Mahesh', '123', 'Y', '2024-03-10 14:15:57');
 
 --
 -- Indexes for dumped tables
@@ -80,6 +115,12 @@ INSERT INTO `user_login` (`id`, `user_type`, `username`, `password`, `is_active`
 -- Indexes for table `student_data`
 --
 ALTER TABLE `student_data`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `student_registration`
+--
+ALTER TABLE `student_registration`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -99,10 +140,16 @@ ALTER TABLE `student_data`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
+-- AUTO_INCREMENT for table `student_registration`
+--
+ALTER TABLE `student_registration`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+
+--
 -- AUTO_INCREMENT for table `user_login`
 --
 ALTER TABLE `user_login`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
