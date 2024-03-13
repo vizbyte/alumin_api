@@ -111,6 +111,11 @@ class Database_Ctrl extends CI_Controller {
             'clg_name' => $this->input->post('clgname'), 
             'current_branch' => $this->input->post('cbranch'), 
             'city' => $this->input->post('city'), 
+            'placement' => $this->input->post('placement'), 
+            'semester' => $this->input->post('sem'), 
+            'n_mentor' => $this->input->post('mentorname'), 
+            'm_email' => $this->input->post('memail'), 
+            'm_contact' => $this->input->post('mcontact'), 
             
         ); 
         $login_info = array(
@@ -132,6 +137,22 @@ class Database_Ctrl extends CI_Controller {
                 'message' => 'Data not inserted'
             ));
         }
+    }
+
+    public function studentList(){
+        $this->data['getStudentList'] 		=	$this->Database_model->getStudentList();
+        if (empty($this->data['getStudentList'] )) {
+            echo json_encode(array( 
+                'status' => false, 
+                'message' => 'Invalid user details.'
+            ));
+        } else {
+            echo json_encode(array( 
+                'status' => true, 
+                'studentlist'=>$this->data['getStudentList']
+            ));
+        }
+
     }
    
 }

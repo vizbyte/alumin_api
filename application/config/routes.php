@@ -57,6 +57,8 @@ $route['get-student-profile']='database_Ctrl/getStudentData';
 $route['login']='database_Ctrl/getAuthorization';
 $route['post-data'] ='database_Ctrl/insertUserData';
 $route['registration'] ='database_Ctrl/insertRegistrationData';
+$route['dashboard/student-list'] ='database_Ctrl/studentList';
+
 
 
 $route['404_override'] = '';

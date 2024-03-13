@@ -44,4 +44,10 @@ class Database_model extends CI_Model {
             return false; 
         }
 	}
+	public function getStudentList(){
+		$sql="SELECT * FROM student_registration where is_active='Y'";
+		$query = $this->db->query($sql);
+		return $query->result();
+
+	}
 }
